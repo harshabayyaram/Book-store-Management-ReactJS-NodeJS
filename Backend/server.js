@@ -5,6 +5,9 @@ const cors = require('cors');
 app.use(express.json())
 app.use(cors());
 
+require('dotenv').config();
+const port = process.env.PORT || 8080;
+
 
 require("express-async-errors"); //for global error handling
 const db = require("./db");
